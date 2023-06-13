@@ -13,6 +13,7 @@ import va from '@vercel/analytics'
 import { Button } from 'greenhouse-react-ui'
 import { useMediaQuery } from '@react-hook/media-query'
 import Link from 'next/link'
+import { RotatingLines } from 'react-loader-spinner'
 
 if (!process.env.NEXT_PUBLIC_UPLOAD_IO_API_KEY)
   throw new Error('UPLOAD_IO_API_KEY is not set')
@@ -119,7 +120,7 @@ export default function UploadComponent() {
 
   return (
     <div className="flex items-center flex-col mx-auto md:mt-12 w-full">
-      {loading && <p>Loading...</p>}
+      <RotatingLines visible={loading} />
       {imageUrl && restoredImageUrl && (
         <>
           <div className="flex gap-4 md:gap-10 justify-center items-center">
