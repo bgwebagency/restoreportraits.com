@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AiFillGithub } from 'react-icons/ai'
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image src={'/github.svg'} alt="Github" width={32} height={32} />
+          <AiFillGithub size={40} />
         </a>
       </div>
     </header>
