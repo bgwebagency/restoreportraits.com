@@ -19,3 +19,8 @@ Please ⭐️ star this project and share it with others to show your support. [
 #### Tutorial
 
 - Watch full tutorial on how I built this on my [YouTube channel](https://youtu.be/4YXUGuo9OM4) for free!
+
+#### Demo
+
+![](./public/demo_gif.gif)
+
