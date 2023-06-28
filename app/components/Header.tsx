@@ -35,7 +35,7 @@ const Header = () => {
           ) : (
             <BsSunFill
               size={32}
-              aria-label="Moon"
+              aria-label="Sun"
               onClick={() => {
                 setTheme('light')
                 document.body.classList.toggle('dark')
