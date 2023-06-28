@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom'
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import Header from './Header'
 
 describe('Header', () => {
@@ -19,11 +20,11 @@ describe('Header', () => {
     )
   })
 
-  test('toggles the theme', async () => {
+  test('toggles the theme', () => {
     render(<Header />)
     const moonIcon = screen.getByLabelText('Moon')
     expect(moonIcon).toBeInTheDocument()
-    fireEvent.click(moonIcon)
+    userEvent.click(moonIcon)
     waitFor(() => expect(screen.getByLabelText('Sun')).toBeInTheDocument())
   })
 })
